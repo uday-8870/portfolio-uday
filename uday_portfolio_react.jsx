@@ -2,48 +2,118 @@ import { useState, useEffect, useRef } from "react";
 
 const data = {
   name: "Udayadithya Reddy Singireddy",
-  title: "B.Tech CSE — Artificial Intelligence",
-  subtitle: "Class of 2025",
-  email: "udayadithyareddysingireddy@gmail.com",
-  phone: "+91 91107 18345",
-  location: "Tirupati, India",
-  linkedin: "https://www.linkedin.com/in/uday-adithya-singireddy-678a8b26b",
+  title: "AI & Deep Learning Engineer",
+  subtitle: "NLP · LLMs · Computer Vision",
+  email: "udayadithyasingireddy@gmail.com",
+  phone: "+91 9110718345",
+  location: "Nandyal, India",
+  linkedin: "https://www.linkedin.com/in/uday-adithya-singireddy",
   github: "https://github.com/uday-8870",
   leetcode: "https://leetcode.com/u/udayleetco/",
   about:
-    "Final-year CS (AI) undergraduate with hands-on experience in machine learning, NLP, and full-stack development. I build practical ML systems, deployable web apps, and lightweight models for edge deployment.",
+    "Final-year CS student with a focused interest in Deep Learning, NLP, and LLMs. Built production-grade models achieving 96%+ accuracy, and developed AI systems spanning computer vision, OCR, and intelligent automation. Seeking an AI/ML role to apply expertise in PyTorch, TensorFlow, and modern NLP frameworks to solve real-world problems.",
   education: [
-    { degree: "B.Tech — Computer Science & Engineering (AI)", school: "Sree Vidyanikethan Engineering College, Tirupati", years: "2021 — 2025", cgpa: "8.8" },
-    { degree: "Intermediate (MPC)", school: "Sree Chaitanya Junior College, Vijayawada", years: "2019 — 2021", cgpa: "8.6" },
-    { degree: "Secondary School", school: "NDR KKR Gowtham School, Vijayawada", years: "2017 — 2019", cgpa: "9.8" },
+    { degree: "B.Tech — Computer Science & Engineering", school: "Sree Vidyanikethan Engineering College, Tirupati", years: "2021 — 2025", cgpa: "8.8" },
   ],
   skills: {
-    Languages: ["Python", "Java", "C"],
-    Web: ["React.js", "Flask", "HTML", "CSS", "JavaScript"],
-    Mobile: ["Flutter"],
-    "ML / AI": ["PyTorch", "T5 NLP", "OpenCV", "Tesseract OCR"],
-    Concepts: ["Machine Learning", "NLP", "DSA"],
+    "ML / DL": ["PyTorch", "TensorFlow", "Keras", "scikit-learn", "NumPy", "Pandas", "NLTK"],
+    Domains: ["Computer Vision", "NLP", "Object Detection", "Generative AI", "OCR", "Reinforcement Learning"],
+    Languages: ["Python", "Java", "JavaScript", "Dart / Flutter"],
+    "Web / Tools": ["Flask", "HTML5", "CSS3", "Git", "Android Studio"],
+    "Cloud / Infra": ["Oracle Cloud (OCI)", "Google Colab"],
   },
   projects: [
-    { title: "DSA Viz-AI", stack: "React · Flask · T5 NLP", desc: "AI-driven tool that recommends optimal data structures from natural language problem descriptions. Multi-label prediction with session history.", link: "", accent: "#6EE7B7" },
-    { title: "Forest Fire Detection", stack: "Keras · CNN · Attention", desc: "Lightweight MSA-Net with Squeeze-and-Excitation blocks for real-time forest fire detection — efficient enough for edge deployment.", link: "", accent: "#FCA5A5" },
-    { title: "NLP Text Summarizer", stack: "Flask · PyTorch · T5", desc: "Web app using T5 transformer to generate concise summaries from arbitrary input text.", link: "https://github.com/uday-8870/nlp-text-summeriser", accent: "#A5B4FC" },
-    { title: "PDF OCR Pipeline", stack: "Python · OpenCV · Tesseract", desc: "Extracts and converts scanned PDF images into editable text through a robust preprocessing and OCR pipeline.", link: "https://github.com/uday-8870/ocr", accent: "#FDE68A" },
-    { title: "Ashok — Desktop Assistant", stack: "Flask · Python", desc: "Modular desktop assistant supporting commands, weather lookups, and system actions with future voice integration.", link: "https://github.com/uday-8870/Ashok-ur-assistant", accent: "#67E8F9" },
+    {
+      title: "ResearchMind — Autonomous Multi-Agent Research System",
+      period: "Nov 2025 — Present",
+      stack: "LangGraph · FastAPI · ChromaDB · Groq · Tavily · React",
+      desc: "Built an end-to-end autonomous research agent with 5 specialized agents — orchestrator, search, reader, synthesis, and critic. Decomposes queries, searches the web in parallel, chunks and embeds documents into a vector store, and generates cited research reports. Designed a custom LLM eval pipeline measuring faithfulness, coverage, and hallucination rate, achieving 91% faithfulness vs 71% baseline.",
+      link: "https://github.com/uday-8870/research-mind",
+      accent: "#FDBA74",
+      badge: "91% faithfulness",
+    },
+    {
+      title: "AI Emergency Green Corridor",
+      period: "Feb 2026 — Present",
+      stack: "Reinforcement Learning · Sensor Fusion · Real-time CV",
+      desc: "Designing an AI traffic management system that autonomously creates green corridors for emergency vehicles by predicting traffic flow, optimizing routes, and controlling signals in real time. Demonstrated measurable reductions in emergency response delays in dense urban simulations without additional infrastructure.",
+      link: "https://lnkd.in/gCFvBJwH",
+      accent: "#FCA5A5",
+      badge: "Active",
+    },
+    {
+      title: "Forest Fire Detection — MSA-Net",
+      period: "Dec 2024 — May 2025",
+      stack: "PyTorch · CNN · Attention · SE Blocks",
+      desc: "Designed a novel Multi-Scale Attention Network with Squeeze-and-Excitation blocks for real-time forest fire detection from aerial imagery. Achieved 96.10% test accuracy, outperforming standard CNN baselines. Implemented full training pipeline with custom data augmentation, mixed-precision training, and model quantization for edge deployment.",
+      link: "https://github.com/uday-8870",
+      accent: "#6EE7B7",
+      badge: "96.1% accuracy",
+    },
+    {
+      title: "Blind Assist — Real-Time Object Detection & Voice Guidance",
+      period: "Jun 2024 — Sep 2024",
+      stack: "YOLOv5 · MobileNet · TTS · Mobile",
+      desc: "Built an accessibility tool integrating YOLOv5 and MobileNet to detect obstacles in real time and deliver voice-guided navigation for visually impaired users. Recognized 80+ object classes with contextual audio descriptions at low-latency mobile inference. Reduced navigation hazards through continuous frame-by-frame obstacle alerts.",
+      link: "https://github.com/uday-8870",
+      accent: "#A5B4FC",
+      badge: "80+ classes",
+    },
+    {
+      title: "PDF Image & Text Extractor — OCR Pipeline",
+      period: "Jun 2025 — Aug 2025",
+      stack: "Python · OpenCV · Tesseract · Deep Learning",
+      desc: "End-to-end OCR pipeline combining deep learning-based text detection with classical image processing to extract structured content from scanned PDFs. Engineered preprocessing stages — deskewing, binarization, noise removal — to handle low-quality document scans. Packaged as a lightweight Python library with CLI for batch processing.",
+      link: "https://github.com/uday-8870/ocr",
+      accent: "#F9A8D4",
+      badge: null,
+    },
+    {
+      title: "DSA Viz-AI — Intelligent DS Recommender",
+      period: "2024",
+      stack: "React · Flask · T5 NLP · Python",
+      desc: "AI-driven tool that recommends optimal data structures from natural language problem descriptions. Uses a fine-tuned T5 NLP model with heuristic ranking, supporting multi-label prediction and session history for iterative problem solving.",
+      link: "",
+      accent: "#FDE68A",
+      badge: null,
+    },
+    {
+      title: "NLP Text Summarizer",
+      period: "2023",
+      stack: "Flask · PyTorch · T5 Transformer",
+      desc: "Web application using a T5 transformer model to generate concise, abstractive summaries from arbitrary user-provided text. Full Flask backend with a clean frontend for real-time summarization.",
+      link: "https://github.com/uday-8870/nlp-text-summeriser",
+      accent: "#67E8F9",
+      badge: null,
+    },
+    {
+      title: "Ashok — Python Desktop Assistant",
+      period: "Oct 2023 — Feb 2024",
+      stack: "Flask · Python · REST APIs",
+      desc: "Flask-based desktop automation assistant responding to text commands with live weather updates, system controls, and API-driven integrations. Modular architecture designed to support future voice command extensions without refactoring core logic.",
+      link: "https://github.com/uday-8870/Ashok-ur-assistant",
+      accent: "#86EFAC",
+      badge: null,
+    },
   ],
   internships: [
-    { org: "Salesforce", role: "Developer Intern (Apex / LWC / Flows)", desc: "Configured enterprise apps, API integrations and process automation." },
-    { org: "AICTE – Altair RapidMiner", role: "Data Science Intern", desc: "Data mining, RapidMiner pipelines, and predictive analytics." },
+    { org: "Altair RapidMiner — AICTE", role: "AI & Data Science Intern", period: "Jul 2024 — Oct 2024", desc: "Applied ML and data mining to industrial datasets. Built predictive models using scikit-learn across unsupervised learning, feature engineering, and model evaluation workflows at scale." },
+    { org: "Salesforce", role: "Developer Intern (Apex / LWC / Flows)", period: "Aug 2023 — Oct 2023", desc: "Developed Salesforce applications using Apex and Lightning Web Components, integrating REST APIs and configuring process automation flows for enterprise-level CRM features." },
   ],
   certifications: [
-    "Oracle Cloud Infrastructure 2024 — Generative AI Certified Professional",
-    "Unsupervised & Reinforcement Learning — Coursera",
+    "Oracle Cloud Infrastructure — Generative AI Certified Professional · Aug 2024",
+    "Unsupervised & Reinforcement Learning — Coursera · Jul 2023",
     "Data Science Master — Altair RapidMiner (AICTE)",
+  ],
+  achievements: [
+    "Postgraduate Conditional Offer — UNSW Sydney (Ranked #19 globally, 2025) for Term 1 2026",
+    "Young Budding Scientist Award — Nandi Academy International School (2014)",
+    "Currently learning German at Goethe Institute",
     "5★ Java on HackerRank · 180+ LeetCode problems solved",
   ],
 };
 
-function useInView(threshold = 0.15) {
+function useInView(threshold = 0.12) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -54,65 +124,83 @@ function useInView(threshold = 0.15) {
   return [ref, visible];
 }
 
-function FadeIn({ children, delay = 0, className = "" }) {
+function FadeIn({ children, delay = 0 }) {
   const [ref, visible] = useInView();
   return (
-    <div ref={ref} className={className} style={{ transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(28px)" }}>
+    <div ref={ref} style={{ transition: `opacity 0.65s ease ${delay}ms, transform 0.65s ease ${delay}ms`, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(26px)" }}>
       {children}
     </div>
   );
 }
 
-function Typewriter({ text, speed = 55 }) {
+function Typewriter({ text, speed = 48 }) {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
   useEffect(() => {
     let i = 0;
-    const iv = setInterval(() => {
-      setDisplayed(text.slice(0, i + 1));
-      i++;
-      if (i >= text.length) { clearInterval(iv); setDone(true); }
-    }, speed);
+    const iv = setInterval(() => { setDisplayed(text.slice(0, i + 1)); i++; if (i >= text.length) { clearInterval(iv); setDone(true); } }, speed);
     return () => clearInterval(iv);
   }, [text, speed]);
-  return <span>{displayed}{!done && <span style={{ animation: "blink 1s step-end infinite", borderRight: "2px solid #6EE7B7", marginLeft: 1 }}>&nbsp;</span>}</span>;
+  return <span>{displayed}{!done && <span style={{ borderRight: "2px solid #6EE7B7", marginLeft: 1, animation: "blink 1s step-end infinite" }}>&nbsp;</span>}</span>;
 }
 
 function SkillTag({ label, i }) {
-  const colors = ["#6EE7B7", "#A5B4FC", "#FCA5A5", "#FDE68A", "#67E8F9", "#F9A8D4"];
+  const colors = ["#6EE7B7", "#A5B4FC", "#FCA5A5", "#FDE68A", "#67E8F9", "#F9A8D4", "#86EFAC", "#FDBA74"];
   const color = colors[i % colors.length];
+  const [hov, setHov] = useState(false);
   return (
-    <span style={{ display: "inline-block", margin: "3px", padding: "4px 12px", borderRadius: 999, border: `1px solid ${color}33`, background: `${color}12`, color, fontSize: 12, fontFamily: "'DM Mono', monospace", letterSpacing: "0.03em", transition: "background 0.2s, transform 0.2s", cursor: "default" }}
-      onMouseEnter={e => { e.currentTarget.style.background = `${color}28`; e.currentTarget.style.transform = "scale(1.07)"; }}
-      onMouseLeave={e => { e.currentTarget.style.background = `${color}12`; e.currentTarget.style.transform = "scale(1)"; }}>
+    <span style={{ display: "inline-block", margin: "3px", padding: "4px 11px", borderRadius: 999, border: `1px solid ${color}${hov ? "55" : "28"}`, background: `${color}${hov ? "1a" : "0d"}`, color, fontSize: 12, fontFamily: "'DM Mono', monospace", transition: "all 0.18s", cursor: "default", transform: hov ? "scale(1.06)" : "scale(1)" }}
+      onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}>
       {label}
     </span>
   );
 }
 
 function ProjectCard({ p, idx }) {
-  const [ref, visible] = useInView(0.1);
-  const [hovered, setHovered] = useState(false);
+  const [ref, visible] = useInView(0.08);
+  const [hov, setHov] = useState(false);
+  const Tag = p.link ? "a" : "div";
+  const linkProps = p.link ? { href: p.link, target: "_blank", rel: "noreferrer" } : {};
   return (
-    <div ref={ref} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
-      style={{ transition: `opacity 0.6s ease ${idx * 100}ms, transform 0.6s ease ${idx * 100}ms`, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(32px)", background: hovered ? "#1a1f2e" : "#111623", border: `1px solid ${hovered ? p.accent + "55" : "#1e2436"}`, borderRadius: 14, padding: "22px 24px", cursor: "default", position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: hovered ? p.accent : "transparent", transition: "background 0.3s", borderRadius: "14px 14px 0 0" }} />
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-        <h3 style={{ margin: 0, fontSize: 15, fontWeight: 600, color: "#e8eaf0", fontFamily: "'Sora', sans-serif" }}>{p.title}</h3>
-        {p.link && <a href={p.link} target="_blank" rel="noreferrer" style={{ color: p.accent, fontSize: 12, fontFamily: "'DM Mono', monospace", textDecoration: "none", opacity: 0.8 }}>↗ source</a>}
+    <Tag ref={ref} {...linkProps} onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+      style={{ display: "block", textDecoration: "none", transition: `opacity 0.6s ease ${idx * 75}ms, transform 0.6s ease ${idx * 75}ms`, opacity: visible ? 1 : 0, transform: visible ? (hov && p.link ? "translateY(-2px)" : "translateY(0)") : "translateY(28px)", background: hov ? "#161b2c" : "#101420", border: `1px solid ${hov ? p.accent + "44" : "#1a2035"}`, borderRadius: 13, padding: "20px 22px", position: "relative", overflow: "hidden", cursor: p.link ? "pointer" : "default" }}>
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: hov ? p.accent : "transparent", transition: "background 0.3s", borderRadius: "13px 13px 0 0" }} />
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10, marginBottom: 6 }}>
+        <div style={{ flex: 1 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 3 }}>
+            <h3 style={{ margin: 0, fontSize: 14, fontWeight: 600, color: "#dde0ec", fontFamily: "'Sora', sans-serif" }}>{p.title}</h3>
+            {p.badge && <span style={{ fontSize: 10, padding: "2px 8px", borderRadius: 999, background: `${p.accent}18`, color: p.accent, fontFamily: "'DM Mono', monospace", border: `1px solid ${p.accent}33` }}>{p.badge}</span>}
+          </div>
+          <div style={{ fontSize: 11, color: p.accent, fontFamily: "'DM Mono', monospace", opacity: 0.75, marginBottom: 8 }}>{p.stack}</div>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4, flexShrink: 0 }}>
+          {p.period && <span style={{ fontSize: 10, color: "#2e3858", fontFamily: "'DM Mono', monospace", whiteSpace: "nowrap" }}>{p.period}</span>}
+          {p.link && <span style={{ color: p.accent, fontSize: 11, fontFamily: "'DM Mono', monospace", opacity: hov ? 1 : 0.5, transition: "opacity 0.2s" }}>↗ view</span>}
+        </div>
       </div>
-      <div style={{ fontSize: 11, color: p.accent, fontFamily: "'DM Mono', monospace", marginBottom: 10, opacity: 0.75 }}>{p.stack}</div>
-      <p style={{ margin: 0, fontSize: 13, color: "#8b92a8", lineHeight: 1.65 }}>{p.desc}</p>
-    </div>
+      <p style={{ margin: 0, fontSize: 13, color: "#717898", lineHeight: 1.65 }}>{p.desc}</p>
+    </Tag>
   );
 }
 
 function StatPill({ label, value, color }) {
   return (
-    <div style={{ textAlign: "center", padding: "14px 20px", background: "#111623", border: `1px solid ${color}22`, borderRadius: 10 }}>
-      <div style={{ fontSize: 22, fontWeight: 700, color, fontFamily: "'Sora', sans-serif" }}>{value}</div>
-      <div style={{ fontSize: 11, color: "#5a6080", fontFamily: "'DM Mono', monospace", marginTop: 2 }}>{label}</div>
+    <div style={{ textAlign: "center", padding: "14px 12px", background: "#101420", border: `1px solid ${color}1a`, borderRadius: 10 }}>
+      <div style={{ fontSize: 18, fontWeight: 700, color, fontFamily: "'Sora', sans-serif" }}>{value}</div>
+      <div style={{ fontSize: 10, color: "#3a4060", fontFamily: "'DM Mono', monospace", marginTop: 2, letterSpacing: "0.05em" }}>{label}</div>
     </div>
+  );
+}
+
+function SectionHeader({ num, title }) {
+  return (
+    <FadeIn>
+      <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 36 }}>
+        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#6EE7B7", letterSpacing: "0.15em" }}>{num} /</span>
+        <h2 style={{ fontSize: 24, fontWeight: 700, fontFamily: "'Sora', sans-serif", color: "#eef0f6", margin: 0 }}>{title}</h2>
+        <div style={{ flex: 1, height: 1, background: "#1a2035", marginLeft: 8 }} />
+      </div>
+    </FadeIn>
   );
 }
 
@@ -125,192 +213,202 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0b0e1a", color: "#c9cdd9", fontFamily: "'DM Sans', sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "#090c18", color: "#c0c4d4", fontFamily: "'DM Sans', sans-serif" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap');
         @keyframes blink { 50% { opacity: 0 } }
-        @keyframes gradientShift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
-        @keyframes floatDot { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+        @keyframes floatA { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-12px) scale(1.02)} }
+        @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #0b0e1a; } ::-webkit-scrollbar-thumb { background: #1e2436; border-radius: 2px; }
-        a { color: inherit; }
-        .nav-link { font-size: 13px; color: #5a6080; font-family: 'DM Mono', monospace; text-decoration: none; transition: color 0.2s; }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #090c18; }
+        ::-webkit-scrollbar-thumb { background: #1a2035; border-radius: 2px; }
+        a { color: inherit; text-decoration: none; }
+        .nav-link { font-size: 12px; color: #3a4060; font-family: 'DM Mono', monospace; letter-spacing: 0.08em; transition: color 0.2s; }
         .nav-link:hover { color: #6EE7B7; }
-        section { scroll-margin-top: 80px; }
+        section { scroll-margin-top: 72px; }
       `}</style>
 
       {/* Ambient blobs */}
       <div style={{ position: "fixed", inset: 0, pointerEvents: "none", overflow: "hidden", zIndex: 0 }}>
-        <div style={{ position: "absolute", top: -120, left: -80, width: 480, height: 480, borderRadius: "50%", background: "radial-gradient(circle, #6EE7B710 0%, transparent 70%)", animation: "floatDot 8s ease-in-out infinite" }} />
-        <div style={{ position: "absolute", bottom: -100, right: -60, width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, #A5B4FC08 0%, transparent 70%)", animation: "floatDot 10s ease-in-out infinite 2s" }} />
+        <div style={{ position: "absolute", top: -140, left: -100, width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, #6EE7B70d 0%, transparent 68%)", animation: "floatA 9s ease-in-out infinite" }} />
+        <div style={{ position: "absolute", top: "40%", right: -80, width: 360, height: 360, borderRadius: "50%", background: "radial-gradient(circle, #A5B4FC08 0%, transparent 70%)", animation: "floatB 11s ease-in-out infinite 1s" }} />
+        <div style={{ position: "absolute", bottom: -80, left: "30%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, #FCA5A506 0%, transparent 70%)", animation: "floatA 13s ease-in-out infinite 3s" }} />
       </div>
 
       {/* Navbar */}
-      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: "0 40px", height: 56, display: "flex", alignItems: "center", justifyContent: "space-between", background: scrolled ? "#0b0e1acc" : "transparent", backdropFilter: scrolled ? "blur(12px)" : "none", borderBottom: scrolled ? "1px solid #1e2436" : "1px solid transparent", transition: "all 0.4s" }}>
-        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 13, color: "#6EE7B7", letterSpacing: "0.08em" }}>urs.dev</span>
-        <div style={{ display: "flex", gap: 28 }}>
+      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, padding: "0 36px", height: 52, display: "flex", alignItems: "center", justifyContent: "space-between", background: scrolled ? "#090c18dd" : "transparent", backdropFilter: scrolled ? "blur(14px)" : "none", borderBottom: scrolled ? "1px solid #1a2035" : "1px solid transparent", transition: "all 0.35s" }}>
+        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 12, color: "#6EE7B7", letterSpacing: "0.1em" }}></span>
+        <div style={{ display: "flex", gap: 24 }}>
           {["projects", "skills", "experience", "contact"].map(s => (
             <a key={s} href={`#${s}`} className="nav-link">{s}</a>
           ))}
         </div>
       </nav>
 
-      <main style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", padding: "0 24px 80px" }}>
+      <main style={{ position: "relative", zIndex: 1, maxWidth: 840, margin: "0 auto", padding: "0 22px 80px" }}>
 
         {/* Hero */}
-        <section style={{ minHeight: "90vh", display: "flex", flexDirection: "column", justifyContent: "center", paddingTop: 80 }}>
-          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 12, color: "#6EE7B7", letterSpacing: "0.15em", marginBottom: 20, opacity: 0.8 }}>AVAILABLE FOR HIRE · 2025</div>
-          <h1 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 700, fontFamily: "'Sora', sans-serif", lineHeight: 1.12, color: "#eef0f6", marginBottom: 16 }}>
-            <Typewriter text={data.name} speed={45} />
+        <section style={{ minHeight: "88vh", display: "flex", flexDirection: "column", justifyContent: "center", paddingTop: 72 }}>
+          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#6EE7B7", letterSpacing: "0.18em", marginBottom: 18, opacity: 0.9 }}>OPEN TO OPPORTUNITIES · 2025</div>
+          <h1 style={{ fontSize: "clamp(28px, 4.5vw, 48px)", fontWeight: 700, fontFamily: "'Sora', sans-serif", lineHeight: 1.1, color: "#eaecf6", marginBottom: 14 }}>
+            <Typewriter text={data.name} speed={42} />
           </h1>
-          <div style={{ fontSize: "clamp(14px, 2vw, 18px)", color: "#5a7080", fontWeight: 400, marginBottom: 32, fontFamily: "'DM Mono', monospace" }}>
-            {data.title} <span style={{ color: "#2a3555" }}>·</span> {data.subtitle}
+          <div style={{ fontSize: "clamp(13px, 2vw, 16px)", color: "#4a5578", fontFamily: "'DM Mono', monospace", marginBottom: 28 }}>
+            {data.title} <span style={{ color: "#1e2842" }}>·</span> {data.subtitle}
           </div>
-          <p style={{ fontSize: 15, color: "#7a8299", lineHeight: 1.75, maxWidth: 540, marginBottom: 40 }}>{data.about}</p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <a href={data.github} target="_blank" rel="noreferrer" style={{ padding: "10px 22px", borderRadius: 8, border: "1px solid #1e2d40", color: "#8b92a8", fontSize: 13, fontFamily: "'DM Mono', monospace", textDecoration: "none", transition: "border-color 0.2s, color 0.2s", background: "transparent" }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = "#6EE7B755"; e.currentTarget.style.color = "#6EE7B7"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = "#1e2d40"; e.currentTarget.style.color = "#8b92a8"; }}>
+          <p style={{ fontSize: 14, color: "#6a7290", lineHeight: 1.78, maxWidth: 520, marginBottom: 36 }}>{data.about}</p>
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+            <a href={data.github} target="_blank" rel="noreferrer"
+              style={{ padding: "9px 20px", borderRadius: 8, border: "1px solid #1a2840", color: "#7a8299", fontSize: 12, fontFamily: "'DM Mono', monospace", transition: "all 0.2s" }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "#6EE7B744"; e.currentTarget.style.color = "#6EE7B7"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "#1a2840"; e.currentTarget.style.color = "#7a8299"; }}>
               GitHub ↗
             </a>
-            <a href={data.linkedin} target="_blank" rel="noreferrer" style={{ padding: "10px 22px", borderRadius: 8, background: "#6EE7B7", color: "#0b0e1a", fontSize: 13, fontFamily: "'DM Mono', monospace", fontWeight: 600, textDecoration: "none", transition: "opacity 0.2s" }}
-              onMouseEnter={e => e.currentTarget.style.opacity = "0.85"}
-              onMouseLeave={e => e.currentTarget.style.opacity = "1"}>
+            <a href={data.linkedin} target="_blank" rel="noreferrer"
+              style={{ padding: "9px 20px", borderRadius: 8, background: "#6EE7B7", color: "#090c18", fontSize: 12, fontFamily: "'DM Mono', monospace", fontWeight: 600, transition: "opacity 0.2s" }}
+              onMouseEnter={e => e.currentTarget.style.opacity = "0.85"} onMouseLeave={e => e.currentTarget.style.opacity = "1"}>
               LinkedIn ↗
+            </a>
+            <a href={`mailto:${data.email}`}
+              style={{ padding: "9px 20px", borderRadius: 8, border: "1px solid #1a2840", color: "#7a8299", fontSize: 12, fontFamily: "'DM Mono', monospace", transition: "all 0.2s" }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "#A5B4FC44"; e.currentTarget.style.color = "#A5B4FC"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "#1a2840"; e.currentTarget.style.color = "#7a8299"; }}>
+              ✉ Email
             </a>
           </div>
 
-          {/* Stats row */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginTop: 56 }}>
+          {/* Stats */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginTop: 52 }}>
             <StatPill label="CGPA" value="8.8" color="#6EE7B7" />
-            <StatPill label="LeetCode" value="180+" color="#A5B4FC" />
-            <StatPill label="Projects" value="5" color="#FDE68A" />
-            <StatPill label="Certs" value="3" color="#FCA5A5" />
+            <StatPill label="BUILDING AI" value="3+ yrs" color="#FCA5A5" />
+            <StatPill label="PROJECTS" value="8" color="#FDE68A" />
+            <StatPill label="LEETCODE" value="180+" color="#A5B4FC" />
           </div>
         </section>
 
         {/* Projects */}
-        <section id="projects" style={{ paddingTop: 80, paddingBottom: 80 }}>
-          <FadeIn>
-            <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 40 }}>
-              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#6EE7B7", letterSpacing: "0.15em" }}>01 /</span>
-              <h2 style={{ fontSize: 26, fontWeight: 700, fontFamily: "'Sora', sans-serif", color: "#eef0f6" }}>Selected Projects</h2>
-              <div style={{ flex: 1, height: 1, background: "#1e2436", marginLeft: 8 }} />
-            </div>
-          </FadeIn>
-          <div style={{ display: "grid", gap: 14 }}>
+        <section id="projects" style={{ paddingTop: 72, paddingBottom: 72 }}>
+          <SectionHeader num="01" title="Projects" />
+          <div style={{ display: "grid", gap: 12 }}>
             {data.projects.map((p, i) => <ProjectCard key={i} p={p} idx={i} />)}
           </div>
         </section>
 
         {/* Skills */}
-        <section id="skills" style={{ paddingBottom: 80 }}>
-          <FadeIn>
-            <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 40 }}>
-              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#6EE7B7", letterSpacing: "0.15em" }}>02 /</span>
-              <h2 style={{ fontSize: 26, fontWeight: 700, fontFamily: "'Sora', sans-serif", color: "#eef0f6" }}>Skills</h2>
-              <div style={{ flex: 1, height: 1, background: "#1e2436", marginLeft: 8 }} />
-            </div>
-          </FadeIn>
-          <div style={{ display: "grid", gap: 20 }}>
-            {Object.entries(data.skills).map(([cat, items], ci) => (
-              <FadeIn key={cat} delay={ci * 80}>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
-                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#3a4060", width: 80, paddingTop: 6, flexShrink: 0 }}>{cat}</span>
-                  <div style={{ flex: 1 }}>
-                    {items.map((s, i) => {
-                      const allIdx = Object.values(data.skills).flat().indexOf(s);
-                      return <SkillTag key={s} label={s} i={allIdx} />;
-                    })}
+        <section id="skills" style={{ paddingBottom: 72 }}>
+          <SectionHeader num="02" title="Skills" />
+          <div style={{ display: "grid", gap: 18 }}>
+            {Object.entries(data.skills).map(([cat, items], ci) => {
+              const allItems = Object.values(data.skills).flat();
+              return (
+                <FadeIn key={cat} delay={ci * 70}>
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+                    <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#2e3858", width: 90, paddingTop: 7, flexShrink: 0, letterSpacing: "0.05em" }}>{cat}</span>
+                    <div style={{ flex: 1 }}>
+                      {items.map((s) => <SkillTag key={s} label={s} i={allItems.indexOf(s)} />)}
+                    </div>
                   </div>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
         </section>
 
         {/* Experience */}
-        <section id="experience" style={{ paddingBottom: 80 }}>
-          <FadeIn>
-            <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 40 }}>
-              <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#6EE7B7", letterSpacing: "0.15em" }}>03 /</span>
-              <h2 style={{ fontSize: 26, fontWeight: 700, fontFamily: "'Sora', sans-serif", color: "#eef0f6" }}>Experience</h2>
-              <div style={{ flex: 1, height: 1, background: "#1e2436", marginLeft: 8 }} />
-            </div>
-          </FadeIn>
-          <div style={{ display: "grid", gap: 14, marginBottom: 40 }}>
+        <section id="experience" style={{ paddingBottom: 72 }}>
+          <SectionHeader num="03" title="Experience" />
+          <div style={{ display: "grid", gap: 12, marginBottom: 44 }}>
             {data.internships.map((item, i) => (
-              <FadeIn key={i} delay={i * 100}>
-                <div style={{ padding: "20px 24px", background: "#111623", border: "1px solid #1e2436", borderRadius: 12, borderLeft: "3px solid #6EE7B755" }}>
-                  <div style={{ fontSize: 15, fontWeight: 600, color: "#d8dce8", fontFamily: "'Sora', sans-serif", marginBottom: 3 }}>{item.org}</div>
-                  <div style={{ fontSize: 12, color: "#6EE7B7", fontFamily: "'DM Mono', monospace", marginBottom: 8, opacity: 0.85 }}>{item.role}</div>
-                  <p style={{ fontSize: 13, color: "#6a7080", lineHeight: 1.6 }}>{item.desc}</p>
+              <FadeIn key={i} delay={i * 90}>
+                <div style={{ padding: "18px 22px", background: "#101420", border: "1px solid #1a2035", borderLeft: "3px solid #6EE7B740", borderRadius: 12 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 6, marginBottom: 4 }}>
+                    <div>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "#d0d4e6", fontFamily: "'Sora', sans-serif" }}>{item.org}</div>
+                      <div style={{ fontSize: 11, color: "#6EE7B7", fontFamily: "'DM Mono', monospace", opacity: 0.85, marginTop: 2 }}>{item.role}</div>
+                    </div>
+                    <span style={{ fontSize: 10, color: "#2e3858", fontFamily: "'DM Mono', monospace" }}>{item.period}</span>
+                  </div>
+                  <p style={{ margin: 0, fontSize: 13, color: "#5a6280", lineHeight: 1.65, marginTop: 8 }}>{item.desc}</p>
                 </div>
               </FadeIn>
             ))}
           </div>
 
-          {/* Education */}
-          <FadeIn delay={100}>
-            <div style={{ marginBottom: 20, fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#3a4060", letterSpacing: "0.1em" }}>EDUCATION</div>
-          </FadeIn>
-          <div style={{ display: "grid", gap: 10 }}>
-            {data.education.map((e, i) => (
-              <FadeIn key={i} delay={i * 80}>
-                <div style={{ padding: "16px 22px", background: "#111623", border: "1px solid #1e2436", borderRadius: 10, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-                  <div>
-                    <div style={{ fontSize: 13, fontWeight: 600, color: "#c8ccda", fontFamily: "'Sora', sans-serif" }}>{e.degree}</div>
-                    <div style={{ fontSize: 11, color: "#4a5070", fontFamily: "'DM Mono', monospace", marginTop: 3 }}>{e.school}</div>
-                  </div>
-                  <div style={{ textAlign: "right" }}>
-                    <div style={{ fontSize: 14, fontWeight: 700, color: "#6EE7B7", fontFamily: "'Sora', sans-serif" }}>{e.cgpa}</div>
-                    <div style={{ fontSize: 10, color: "#3a4060", fontFamily: "'DM Mono', monospace" }}>{e.years}</div>
-                  </div>
+          <FadeIn><div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#2e3858", letterSpacing: "0.12em", marginBottom: 16 }}>EDUCATION</div></FadeIn>
+          {data.education.map((e, i) => (
+            <FadeIn key={i} delay={i * 70}>
+              <div style={{ padding: "16px 22px", background: "#101420", border: "1px solid #1a2035", borderRadius: 10, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8, marginBottom: 10 }}>
+                <div>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: "#c0c4da", fontFamily: "'Sora', sans-serif" }}>{e.degree}</div>
+                  <div style={{ fontSize: 11, color: "#3a4060", fontFamily: "'DM Mono', monospace", marginTop: 3 }}>{e.school}</div>
+                </div>
+                <div style={{ textAlign: "right" }}>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: "#6EE7B7", fontFamily: "'Sora', sans-serif" }}>{e.cgpa}</div>
+                  <div style={{ fontSize: 10, color: "#2e3858", fontFamily: "'DM Mono', monospace" }}>{e.years}</div>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+
+          <FadeIn delay={100}><div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#2e3858", letterSpacing: "0.12em", marginBottom: 14, marginTop: 36 }}>CERTIFICATIONS</div></FadeIn>
+          <div style={{ display: "grid", gap: 8, marginBottom: 36 }}>
+            {data.certifications.map((c, i) => (
+              <FadeIn key={i} delay={i * 60}>
+                <div style={{ padding: "11px 18px", background: "#101420", border: "1px solid #1a2035", borderRadius: 8, fontSize: 13, color: "#6a7090", display: "flex", alignItems: "center", gap: 10 }}>
+                  <span style={{ color: "#A5B4FC", fontSize: 9 }}>◆</span> {c}
                 </div>
               </FadeIn>
             ))}
           </div>
 
-          {/* Certifications */}
-          <FadeIn delay={200}>
-            <div style={{ marginTop: 36, marginBottom: 16, fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#3a4060", letterSpacing: "0.1em" }}>CERTIFICATIONS</div>
-            <div style={{ display: "grid", gap: 8 }}>
-              {data.certifications.map((c, i) => (
-                <div key={i} style={{ padding: "12px 18px", background: "#111623", border: "1px solid #1e2436", borderRadius: 8, fontSize: 13, color: "#7a8299", display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ color: "#A5B4FC", fontSize: 10 }}>◆</span> {c}
+          <FadeIn delay={100}><div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#2e3858", letterSpacing: "0.12em", marginBottom: 14 }}>ACHIEVEMENTS</div></FadeIn>
+          <div style={{ display: "grid", gap: 8 }}>
+            {data.achievements.map((a, i) => (
+              <FadeIn key={i} delay={i * 55}>
+                <div style={{ padding: "11px 18px", background: "#101420", border: "1px solid #1a2035", borderRadius: 8, fontSize: 13, color: "#6a7090", display: "flex", alignItems: "flex-start", gap: 10 }}>
+                  <span style={{ color: "#FDE68A", fontSize: 9, marginTop: 4 }}>◆</span> {a}
                 </div>
-              ))}
-            </div>
-          </FadeIn>
+              </FadeIn>
+            ))}
+          </div>
         </section>
 
         {/* Contact */}
         <section id="contact" style={{ paddingBottom: 40 }}>
           <FadeIn>
-            <div style={{ padding: "44px 40px", background: "linear-gradient(135deg, #111623 60%, #131825)", border: "1px solid #1e2436", borderRadius: 18, textAlign: "center", position: "relative", overflow: "hidden" }}>
-              <div style={{ position: "absolute", top: -60, right: -60, width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, #6EE7B710, transparent 70%)" }} />
-              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#6EE7B7", letterSpacing: "0.15em", marginBottom: 14 }}>04 / GET IN TOUCH</div>
-              <h2 style={{ fontSize: 28, fontWeight: 700, fontFamily: "'Sora', sans-serif", color: "#eef0f6", marginBottom: 10 }}>Let's build something together.</h2>
-              <p style={{ fontSize: 14, color: "#5a6080", marginBottom: 28 }}>Open to full-time roles, internships, and interesting ML collaborations.</p>
+            <div style={{ padding: "44px 40px", background: "#101420", border: "1px solid #1a2035", borderRadius: 18, textAlign: "center", position: "relative", overflow: "hidden" }}>
+              <div style={{ position: "absolute", top: -60, right: -60, width: 220, height: 220, borderRadius: "50%", background: "radial-gradient(circle, #6EE7B70c, transparent 70%)", pointerEvents: "none" }} />
+              <div style={{ position: "absolute", bottom: -40, left: -40, width: 160, height: 160, borderRadius: "50%", background: "radial-gradient(circle, #A5B4FC08, transparent 70%)", pointerEvents: "none" }} />
+              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#6EE7B7", letterSpacing: "0.18em", marginBottom: 14 }}>04 / GET IN TOUCH</div>
+              <h2 style={{ fontSize: 26, fontWeight: 700, fontFamily: "'Sora', sans-serif", color: "#eef0f6", marginBottom: 10 }}>Let's build something together.</h2>
+              <p style={{ fontSize: 13, color: "#4a5270", marginBottom: 28 }}>Open to full-time AI/ML roles, research collaborations, and interesting projects.</p>
               <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-                <a href={`mailto:${data.email}`} style={{ padding: "11px 24px", background: "#6EE7B7", color: "#0b0e1a", borderRadius: 8, fontSize: 13, fontFamily: "'DM Mono', monospace", fontWeight: 600, textDecoration: "none", transition: "opacity 0.2s" }}
+                <a href={`mailto:${data.email}`}
+                  style={{ padding: "10px 22px", background: "#6EE7B7", color: "#090c18", borderRadius: 8, fontSize: 12, fontFamily: "'DM Mono', monospace", fontWeight: 600, transition: "opacity 0.2s" }}
                   onMouseEnter={e => e.currentTarget.style.opacity = "0.85"} onMouseLeave={e => e.currentTarget.style.opacity = "1"}>
                   ✉ Email me
                 </a>
-                <a href={data.linkedin} target="_blank" rel="noreferrer" style={{ padding: "11px 24px", border: "1px solid #1e2d44", color: "#8b92a8", borderRadius: 8, fontSize: 13, fontFamily: "'DM Mono', monospace", textDecoration: "none", transition: "all 0.2s" }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = "#A5B4FC55"; e.currentTarget.style.color = "#A5B4FC"; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = "#1e2d44"; e.currentTarget.style.color = "#8b92a8"; }}>
+                <a href={data.linkedin} target="_blank" rel="noreferrer"
+                  style={{ padding: "10px 22px", border: "1px solid #1e2d44", color: "#7a8299", borderRadius: 8, fontSize: 12, fontFamily: "'DM Mono', monospace", transition: "all 0.2s" }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = "#A5B4FC44"; e.currentTarget.style.color = "#A5B4FC"; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = "#1e2d44"; e.currentTarget.style.color = "#7a8299"; }}>
                   LinkedIn ↗
                 </a>
+                <a href={data.github} target="_blank" rel="noreferrer"
+                  style={{ padding: "10px 22px", border: "1px solid #1e2d44", color: "#7a8299", borderRadius: 8, fontSize: 12, fontFamily: "'DM Mono', monospace", transition: "all 0.2s" }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = "#6EE7B744"; e.currentTarget.style.color = "#6EE7B7"; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = "#1e2d44"; e.currentTarget.style.color = "#7a8299"; }}>
+                  GitHub ↗
+                </a>
               </div>
-              <div style={{ marginTop: 24, fontSize: 12, color: "#2e3550", fontFamily: "'DM Mono', monospace" }}>{data.phone}</div>
+              <div style={{ marginTop: 22, fontSize: 11, color: "#1e2842", fontFamily: "'DM Mono', monospace" }}>{data.phone} · {data.location}</div>
             </div>
           </FadeIn>
         </section>
-
       </main>
 
-      <footer style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "20px 0 32px", fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#2a3050", letterSpacing: "0.06em" }}>
+      <footer style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "18px 0 30px", fontFamily: "'DM Mono', monospace", fontSize: 10, color: "#1e2540", letterSpacing: "0.08em" }}>
         UDAYADITHYA REDDY SINGIREDDY · 2025
       </footer>
     </div>
