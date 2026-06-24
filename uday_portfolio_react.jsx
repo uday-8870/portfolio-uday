@@ -25,7 +25,7 @@ const data = {
   projects: [
     {
       title: "ResearchMind — Autonomous Multi-Agent Research System",
-      period: "Nov 2025 — Present",
+      period: "Feb 2026 — Jun 2026",
       stack: "LangGraph · FastAPI · ChromaDB · Groq · Tavily · React",
       desc: "Built an end-to-end autonomous research agent with 5 specialized agents — orchestrator, search, reader, synthesis, and critic. Decomposes queries, searches the web in parallel, chunks and embeds documents into a vector store, and generates cited research reports. Designed a custom LLM eval pipeline measuring faithfulness, coverage, and hallucination rate, achieving 91% faithfulness vs 71% baseline.",
       link: "https://github.com/uday-8870/research-mind",
@@ -97,6 +97,7 @@ const data = {
     },
   ],
   internships: [
+    { org: "Outlier AI", role: "AI / ML Intern", period: "Aug 2024 — Mar 2025", desc: "Worked on LLM training and evaluation pipelines. Performed data labeling, quality assurance, and dataset refinement. Reviewed model outputs against guidelines and provided structured feedback to improve response reliability and accuracy. Collaborated with distributed teams on AI system performance." },
     { org: "Altair RapidMiner — AICTE", role: "AI & Data Science Intern", period: "Jul 2024 — Oct 2024", desc: "Applied ML and data mining to industrial datasets. Built predictive models using scikit-learn across unsupervised learning, feature engineering, and model evaluation workflows at scale." },
     { org: "Salesforce", role: "Developer Intern (Apex / LWC / Flows)", period: "Aug 2023 — Oct 2023", desc: "Developed Salesforce applications using Apex and Lightning Web Components, integrating REST APIs and configuring process automation flows for enterprise-level CRM features." },
   ],
